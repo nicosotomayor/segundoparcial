@@ -14,23 +14,23 @@ public class PersonaApp {
 		EntityManager em =emf.createEntityManager();
 		try {
 			em.getTransaction().begin();
-			Localidad loc = Localidad.builder().denominacion("Cuidad").build();
-			Domicilio dom1 = Domicilio.builder().calle("El Parral").numero(2400).build();		
+			Localidad loc = Localidad.builder().denominacion("Guaymallen").build();
+			Domicilio dom1 = Domicilio.builder().calle("Moldes").numero(123).build();		
 			Autor auto1 = Autor.builder().
-					nombre("Isabel")
-					.apellido("Allende")
-					.biografia("No Autorizada")
+					nombre("J R R ")
+					.apellido(" Tolkien")
+					.biografia("aaaaaaa")
 					.build();
 			Libro libro1 = Libro.builder()
-					.titulo("De amor y de sombras")
-					.fecha(1984)
+					.titulo("El Silmarillion")
+					.fecha(1970)
 					.genero("Novela")
-					.paginas(300)
+					.paginas(200)
 					.build();
 			Persona persona1 = Persona.builder()
-					.nombre("Soledad")
-					.apellido("Rojas")
-					.dni(33131110)
+					.nombre("Aldo")
+					.apellido("Lopez")
+					.dni(11111111)
 					.build();
 			libro1.getAutores().add(auto1);
 			em.persist(auto1);
